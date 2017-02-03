@@ -40,6 +40,7 @@ $ 7
 ```
 
 After running the same test 16 times (with key lengths from 2 to 17), we end up with the following result (average index of coincidence):
+
 | Key length guess | Index of coincidence |
 |:----------------:|:--------------------:|
 |         2        |  0.04380706500916577 |
