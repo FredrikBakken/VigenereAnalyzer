@@ -13,8 +13,8 @@ class VigenereAnalyzer {
 	public static char[] getCipher() {
 		System.out.println("Please insert the vigènere cipher: ");
 		String cipher = sc.nextLine();
-		for ( int i = 0; i < cipher.length(); i++) {
-			  cipher = cipher.replaceAll("[^a-zA-Z]", "");
+		for (int i = 0; i < cipher.length(); i++) {
+			cipher = cipher.replaceAll("[^a-zA-Z]", "");
 		}
 		char[] c = cipher.toCharArray();
 		return c;
