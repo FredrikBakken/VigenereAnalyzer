@@ -9,10 +9,13 @@ class VigenereAnalyzer {
 
 	public static ArrayList<Double> ioc = new ArrayList<Double>();
 
-	// Get the ciphertext from the user
+	// Get the ciphertext from the user (removes all non-letter characters)
 	public static char[] getCipher() {
 		System.out.println("Please insert the vigènere cipher: ");
-		String cipher = sc.nextLine().replaceAll("\\s+", "");
+		String cipher = sc.nextLine();
+		for ( int i = 0; i < cipher.length(); i++) {
+			  cipher = cipher.replaceAll("[^a-zA-Z]", "");
+		}
 		char[] c = cipher.toCharArray();
 		return c;
 	}
@@ -24,7 +27,7 @@ class VigenereAnalyzer {
 		return k;
 	}
 
-	// Getting the cipher sequences
+	// Getting the ciphertext sequences
 	public static void getSequence(char[] c, int k) {
 		System.out.println("");
 		for (int i = 0; i < k; i++) {
@@ -39,7 +42,7 @@ class VigenereAnalyzer {
 		}
 	}
 
-	// Print the cipher sequences
+	// Print the ciphertext sequences
 	public static void printSequence() {
 		int count = 1;
 		for (String output : list) {
@@ -50,6 +53,7 @@ class VigenereAnalyzer {
 		}
 	}
 
+	// Get the average index of coincidence value
 	public static double getAvg(int k) {
 		double tot = 0.0000000000000;
 		double avg = 0.0000000000000;
